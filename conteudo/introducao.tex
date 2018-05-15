@@ -1,0 +1,46 @@
+% ----------------------------------------------------------
+% Introdução
+%Ex: \chapter{TÍTULO A SER IMPRESSO NO CORPO DO TEXTO}{Título no cabeçalho}{Título no Sumario}
+% ----------------------------------------------------------
+\chapter{INTRODUÇÃO} 
+
+	Uma ação é a menor parcela do capital social de uma empresa ou sociedade anônima. Cada uma delas representam pequenas fatias do capital de uma determinada empresa, e o seu valor varia constantemente influenciado por vários fatores, entre eles pode-se destacar a lei da oferta e da procura (o quanto investidores procuram uma determinada ação para comprar), a situação política e econômica de cada país, pela administração da empresa entre outras inúmeras variáveis \cite{REPORTERBRASIL}. Sendo assim, isto interfere nos preços de uma ação, tornando-se muito difícil prever com exatidão o valor que uma ação terá ao final do pregão.
+	
+	Mesmo com todos os riscos e a alta volatilidade do mercado acionário, existem pessoas que dedicam suas vidas a analisar gráficos e tentar prever o comportamento das ações, que em uma primeira impressão parece ser aleatório, mas por mais experiente que o investidor seja é muito difícil alguém analisar por si só qual é a tendência de uma ação, pois para analisar a tendência de uma certa ação o investidor deve levar em consideração uma série de fatores como por exemplo as altas e baixas anteriores, volume de ações negociados, o valor de mercado de uma empresa, a liquidez corrente (ativos circulantes divididos pelos passivos circulantes) e o retorno do patrimônio líquido (ROE). Agora imagine uma análise de todos esses itens em 100, 200 ou 1000 empresas diferentes, fazer uma análise sobre estas condições é muito cansativo, e ainda dependeria-se de fatores psicológicos do investidor \cite{FOGACA}.   
+	
+	Uma boa alternativa para alcançar um valor aproximado da variação do preço de uma determinada ação é através do uso de redes neurais para fazer a análise de séries temporais \cite{GIACOMELL}.  
+	
+	O estudo de redes neurais para previsão de séries temporais cresceu muito ao longo dos últimos anos. O principal fator para a escolha de redes neurais na resolução deste tipo de problema é devido ao seu bom comportamento na solução de problemas não lineares que contêm muitas variáveis \cite{GIACOMELL}, como é o caso do mercado acionário que possui vários fatores que podem interferir no preço das ações. Considerando  a dificuldade em prever a variação dos preços de uma ação, dada a quantidade de variáveis que interferem na mesma, têm-se um crescente aumento no interesse em investimentos na automatização/previsão de operações, sendo estas as mais confiáveis quanto possível.    
+	
+	Considerando-se que os fatores que alteraram os preços de uma determinada ação continuarão afetando o seu valor no futuro, justifica-se a criação ou estudo de um método para capturar esses fatores a fim de prever quando estes eventos se repetirão.
+	
+	O presente trabalho propõe a criação de um algoritmo baseado em ensembles de redes neurais para analisar as séries temporais, com o intuito de identificar comportamentos parecidos e prever seus resultados tomando como base uma análise técnica, que por sua vez interpreta que todos os dados que podem ser utilizados na previsão estão contidos no valor da ação. Este tipo de análise também afirma que as variações do passado tendem a se repetir no futuro\cite{GIACOMELL}. Desta forma pretende-se alcançar maiores lucros nos investimentos, pois quando o investidor passa a responsabilidade da análise para uma máquina elimina-se o fator emocional do investidor possibilitando uma análise soberana. 
+
+\section{OBJETIVOS}
+Esta seção contém os objetivos do trabalho, que estão divididos em duas sub categorias, gerais e específicos.
+
+\subsection{Objetivo geral}
+Elaborar e calibrar uma rede neural artificial de modo que,  através da análise de séries temporais, ela seja capaz de projetar com acurácia variações dos valores de ações.
+
+\subsection{Objetivos específicos}
+
+ \begin{itemize}
+	\item Montar uma base de dados históricos de transações do mercado acionário e identificar os melhores critérios que podem ser utilizados na elaboração da rede.
+	\item Montar uma base de testes para avaliar a acurácia da rede.
+\end{itemize}
+
+\section{Metodologia}
+As seções a seguir tem por objetivo informar como o trabalho será realizado.
+
+\subsection{Levantamento Bibliográfico}
+Primeiramente será realizado um estudo em livros, artigos e algumas páginas web, para maior compreensão das tecnologias de redes neurais existentes, compreender seu funcionamento e também identificar o que já está sendo usado. 
+
+\subsection{Sistemática}
+Inicialmente, serão coletados dados históricos acerca da variação dos preços de ações em várias empresas, os dados serão extraídos da plataforma Yahoo Finances no formato CSV. Em seguida, será realizado um estudo mais aprofundado com o intuito de identificar as causas destas variações, e os dados que podem ser usados para a previsão. 
+
+Em seguida captura e estudo dos dados, será elaborada uma rede neural, as funções de ativação que melhor se adaptem ao problema e a escolha de um algoritmo de aprendizado.
+
+Logo após a definição da rede neural será iniciado o treinamento da rede neural, com os dados históricos obtidos no processo anterior. Com a rede neural já calibrada, será iniciado os testes de eficiência, a fim de verificar e comprovar sua eficiência.
+
+Para a realização dos testes será comparada a saída da rede neural com os valores reais da ação no período de tempo analisado. Estes dados também serão usados para um retreinamento da rede neural.
+

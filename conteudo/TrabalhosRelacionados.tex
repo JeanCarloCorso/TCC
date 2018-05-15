@@ -1,0 +1,20 @@
+\chapter{Trabalhos Relacionados}
+A seção a seguir tem por objetivo apontar alguns dos trabalhos já publicados e que tenham relação com o assunto desta pesquisa. 
+
+\section{REDES NEURAIS NA PREVISÃO DO MERCADOS FINANCEIROS}
+No trabalho de \citeonline[]{BOSAIPO} ele faz testes com vários tipos de redes neurais diferentes, a que atinge melhores resultados, segundo ele, é a rede com o algoritmo de aprendizado backpropagation randomized, esta rede conta com três camadas sendo 20 neurônios na primeira 6 na segunda e 2 na última. A função de ativação usada por ele nesta rede foi a hiperbólica entre a primeira e segunda camada, e a função de ativação linear entre a segunda e a última.
+
+Embora a rede com as configurações citadas acima tenha tido um bom resultado, há um alto índice de erros o que torna a aplicação pouco confiável. Provavelmente, como o próprio autor sugere, os erros que a rede produziu foi por causa do curto período de tempo usado para testes, o autor usou como entrada apenas as cotações e os volumes negociados nos últimos 10 dias.
+
+Seguindo a mesma linha de raciocínio de Bosaipo \citeonline[]{OCONNOR} implementam uma rede neural que tem como dados de entrada o valor de abertura e com esses dados tenta prever se a ação terá alta ou queda ao final do dia. Esta implementação é muito boa porém não aponta qual será o valor máximo que a ação poderá atingir ao final do pregão apenas indica a tendência.
+
+\section{USO DE ENSEMBLES DE REDES NEURAIS}
+Outro trabalho bastante interessante na previsão do mercado acionário é o de \citeonline[]{GIACOMELL} que diferentemente de Bosaipo, preferiu criar e treinar uma rede que apresente ao investidor apenas a tendência do mercado, informando se os próximos movimentos serão de alta ou queda. 
+Em sua pesquisa Giacomel utiliza dois ensembles de redes neurais, sendo eles específicos para cada perfil de investidor, moderado ou agressivo. No ensemble moderado o autor escolheu usar como entrada os valores de abertura, máximo, mínimo, e fechamento dos dias anteriores, com essas informações o ensemble pode produzir três saídas, alta, queda ou não sabe que representa períodos de incertezas. Este ensemble é composto por duas redes neurais e mais uma porta lógica AND que faz a junção das saídas da rede.
+
+O ensemble agressivo é um complemento do ensemble moderado, ele usa as mesmas entradas porém possui além das duas redes neurais um indicador técnico que avalia a situação do mercado e serve de apoio na decisão. O indicador técnico usado pelo autor foi o SAR pois segundo o mesmo é o que apresentou melhor desempenho quando comparado com outros.
+
+O autor conseguiu alcançar resultados satisfatórios com o modelo proposto, porém os lucros poderiam ser mais altos se o investidor soubesse o valor máximo e mínimo que a ação poderia alcançar no dia, pois assim saberia o momento perfeito para comprar ou vender suas ações.
+
+\section{CONSIDERAÇÕES}
+Observando as pesquisas realizadas nesta área, foi constatado que os produtos existentes utilizam apenas uma série de retornos para prever as variações futuras, o que torna o resultado inconsistente e suscetível a erros, além do mais os artigos que foram pesquisados estão preocupados em apontar apenas a tendência de uma ação, ou seja, se esta irá subir ou descer no próximo período. O presente trabalho propõe a análise de vários fatores, como o valor de abertura, o valor de fechamento do dia anterior volume negociado, valor máximo e mínimo atingido pela ação em cada período, e terá como objetivo principal apontar o valor exato(ou o mais próximo possível) dos valores futuros para que o investidor saiba o melhor momento para fazer a compra ou venda de suas ações.
